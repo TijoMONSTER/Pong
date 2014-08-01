@@ -63,8 +63,9 @@
 
 - (IBAction)dragPaddle:(UIPanGestureRecognizer *)panGestureRecognizer
 {
-	self.paddleView.center = CGPointMake([panGestureRecognizer translationInView:self.view].x, self.paddleView.center.y);
+	self.paddleView.center = CGPointMake([panGestureRecognizer locationInView:self.view].x, self.paddleView.center.y);
 	[self.dynamicAnimator updateItemUsingCurrentState:self.paddleView];
+
 }
 
 
